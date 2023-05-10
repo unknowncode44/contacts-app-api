@@ -18,10 +18,6 @@ export class ContactsService extends TypeOrmCrudService<ContactEntity> {
         super(repo);
     }
 
-    // async findAll(params): Promise<Contact[]>{
-    //     return await this.repo.find()
-    // }
-
     async createOne(req: CrudRequest, dto: DeepPartial<ContactEntity>): Promise<ContactEntity> {
         const contact = await super.createOne(req, dto)
         this.contactsGateway.contactCreated(contact)

@@ -2,10 +2,6 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ContactsController } from './contacts/controllers/contacts/contacts.controller';
-import { ContactsService } from './contacts/services/contacts/contacts.service';
-import { ContactEntity } from './contacts/entities/contact.entity';
-import { ContactsGateway } from './contacts/gateways/contacts.gateway';
 import { ContactsModule } from './contacts/contacts.module';
 
 
